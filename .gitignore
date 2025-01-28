@@ -1,0 +1,72 @@
+# Byte-compiled files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environment
+env/
+venv/
+ENV/
+*.venv/
+
+# Distribution files
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Logs and debug files
+*.log
+*.out
+*.err
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Testing and coverage
+.pytest_cache/
+.coverage
+.tox/
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Redis-related files (if using Redis)
+dump.rdb
+appendonly.aof
+
+# TensorFlow or PyTorch checkpoints
+checkpoints/
+*.ckpt
+
+# Sensitive files
+.env
+*.key
+*.pem
+
+# Face recognition model files (if generated during runtime)
+*.tflite
+*.onnx
+*.h5
+*.pth
+*.pb
+model/
+
+# Miscellaneous
+*.bak
+*.swp
+*.tmp
+*.cache
+*.pickle
+*.pkl
