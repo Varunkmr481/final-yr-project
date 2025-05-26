@@ -1,5 +1,5 @@
 import cv2
-from Home import st
+import streamlit as st
 from Home import face_rec
 import time
 
@@ -15,6 +15,11 @@ st.markdown(
             font-weight: bold;
             text-align: center;
             margin-bottom: 1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(45deg, #FF5733, #FFD700, #4CAF50, #2980b9, #9b59b6);
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: gradient-animation 5s ease infinite;
         }
         .sub-header {
             font-size: 1.5rem;
@@ -136,3 +141,4 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+

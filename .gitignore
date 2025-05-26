@@ -4,6 +4,10 @@ __pycache__/
 *.pyo
 *.pyd
 
+# folder images
+# /2_Fast_Face_Recognition_System/
+# /3. DLBAFRAS
+
 # Virtual environment
 env/
 venv/

@@ -14,18 +14,36 @@ st.set_page_config(
 st.markdown(
     """
     <style>
+        body {
+            background-color: #f4f7f6;
+            font-family: 'Arial', sans-serif;
+        }
         .main-header {
-            font-size: 2.5rem;
-            color: #4CAF50;
+            font-size: 3rem;
             text-align: center;
             font-weight: bold;
             margin-bottom: 1rem;
+            padding: 5px 0;
+            background-color: #4CAF50;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(45deg, #FF5733, #FFD700, #4CAF50, #2980b9, #9b59b6);
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: gradient-animation 5s ease infinite;
+        }
+        
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
         .sub-header {
-            font-size: 1.5rem;
-            color: #555;
+            font-size: 1.8rem;
+            color: #34495e;
             text-align: center;
             margin-bottom: 2rem;
+            font-style: italic;
         }
     </style>
     """,
@@ -50,7 +68,7 @@ add_vertical_space(2)
 rain(
     emoji="\U0001F44B",  # Waving hand emoji
     font_size=20,
-    falling_speed=5,
+    falling_speed=7,
     animation_length="infinite"
 )
 

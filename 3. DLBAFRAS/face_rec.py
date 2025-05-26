@@ -112,7 +112,7 @@ def face_prediction(resized_test_image, dataframe, feature_column, name_role = [
             color = (0,0,255)
         else : 
             color = (0,255,0)
-            
+        
         # print(person_name, person_role)
         cv2.rectangle(resized_test_copy, (x1, y1), (x2, y2), color)
     
@@ -124,7 +124,7 @@ def face_prediction(resized_test_image, dataframe, feature_column, name_role = [
 
 # class for real time prediction
 
-# save logs for every minute
+# save logs for after every wait time
 class RealTimePred:
     def __init__(self):
         self.logs = dict(name=[], role=[], current_time=[])
@@ -195,7 +195,29 @@ class RealTimePred:
         return resized_test_copy
 
 
+# class for Registration 
+class RegistrationForm:
+    
+    def __init__(self):
+        self.sample = 0
+        
+    def reset(self):
+        self.sample = 0
+        
+    def getEmbeddings(self, frame):
 
-
-
-
+        results = faceapp.get(frame,max_num=1)
+        embeddings = None
+        for res in results:
+            self.sample += 1
+            x1, y1, x2, y2 = res['bbox'].astype(int)
+            cv2.rectangle(frame, (x1,y1),(x2,y2),(0,255,0),1)
+            
+            # put text samples info
+            text = f"samples : {self.sample}"
+            cv2.putText(frame, text, (x1,y1), cv2.FONT_HERSHEY_DUPLEX, 0.6, (255, 255, 0), 2)
+        
+            # facial features
+            embeddings = res['embedding']
+        
+        return frame, embeddings
