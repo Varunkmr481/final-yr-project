@@ -7,13 +7,16 @@ __pycache__/
 # folder images
 # /2_Fast_Face_Recognition_System/
 # /3. DLBAFRAS
+/Untitled.ipynb
 
 # Virtual environment
+Lib/
 env/
 venv/
 ENV/
 .venv/
 *.venv/
+Scripts/
 
 # Distribution files
 build/
@@ -85,6 +88,7 @@ model/
 *.tiff
 *.svg
 *.webp
+*.HEIC
 
 # Audio / Video files (optional - block if not needed)
 *.mp3
@@ -122,3 +126,30 @@ model/
 # results/
 # plots/
 # figures/
+
+# Build output
+build/
+dist/
+*.js
+*.js.LICENSE.txt
+
+# Fonts
+*.woff
+*.woff2
+
+# Merge conflict leftovers
+*.orig
+
+# Optional: Ignore all share/ or output folders
+Notes/attendance_system/share/
+
+# Ignore Jupyter export templates and shared configs
+Notes/attendance_system/share/jupyter/
+
+# Ignore all .j2 and .tpl if generated
+*.j2
+*.tpl
+*.css
+*.eot
+*.ttf
+*.html
