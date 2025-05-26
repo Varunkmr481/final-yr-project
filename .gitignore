@@ -8,6 +8,7 @@ __pycache__/
 env/
 venv/
 ENV/
+.venv/
 *.venv/
 
 # Distribution files
@@ -55,7 +56,7 @@ checkpoints/
 *.key
 *.pem
 
-# Face recognition model files (if generated during runtime)
+# Face recognition / ML model files
 *.tflite
 *.onnx
 *.h5
@@ -63,10 +64,57 @@ checkpoints/
 *.pb
 model/
 
-# Miscellaneous
+# Pickled / cached / binary files
 *.bak
 *.swp
 *.tmp
 *.cache
 *.pickle
 *.pkl
+
+# Media files (optional - block if not needed)
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.tiff
+*.svg
+*.webp
+
+# Audio / Video files (optional - block if not needed)
+*.mp3
+*.wav
+*.mp4
+*.mkv
+*.avi
+*.mov
+*.flv
+
+# Dataset files (optional - block large local datasets)
+*.csv
+*.tsv
+*.xls
+*.xlsx
+*.rds
+*.rda
+*.parquet
+*.feather
+*.h5
+*.json
+*.zip
+*.tar.gz
+*.tar
+*.7z
+
+# Notebook exports
+*.nbconvert.ipynb
+
+# IPython runtime
+~/.local/share/jupyter/runtime/
+
+# Custom output folders (optional)
+# outputs/
+# results/
+# plots/
+# figures/
